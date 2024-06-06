@@ -1,9 +1,18 @@
 import { Link, useNavigate } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {useAuth0} from '@auth0/auth0-react'
 const Register = () => {
   const [formData, setFormData] = useState({});
   const navigate = useNavigate();
+  const {loginWithRedirect, isAuthenticated} = useAuth0();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/profile');
+    }
+  }, [isAuthenticated, navigate]);
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     navigate('/login');
@@ -23,7 +32,7 @@ const Register = () => {
         <input onChange={handleOnChange} id="password" className="bg-slate-300 p-3 font-medium text-black outline-none rounded-xl" type="password" placeholder="Enter your password" />
         <button type="submit" className="bg-slate-700 text-white font-bold text-lg hover:bg-slate-900 p-3 rounded-lg">Register</button>
       </form>
-      <button type="submit" className="bg-white border-sky-200 border mt-2 w-full text-black  text-lg hover:bg-slate-50 p-3 rounded-lg flex justify-center items-center gap-1">Sign up using <FcGoogle className="text-xl"/></button>
+      <button onClick={() => loginWithRedirect()} className="bg-white border-sky-200 border mt-2 w-full text-black  text-lg hover:bg-slate-50 p-3 rounded-lg flex justify-center items-center gap-1">Sign up using <FcGoogle className="text-xl"/></button>
       <div className="flex mt-2 items-center">
         <p className="text-md mx-2 text-slate-700">already have an account?</p>
         <Link to={'/login'} className="text-md text-blue-600">login</Link>
