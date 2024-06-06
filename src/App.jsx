@@ -3,7 +3,8 @@ import Home from './pages/Home';
 import PageNotFound from './pages/Error';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Profile from './pages/Profile';
+import ForgotPassword from './pages/ForgotPassword';
+import Dashboard from './pages/Dashboard';
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
         <Route path='/' element={<Home/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
-        <Route path='/profile' element={<Profile/>} />
+        <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/forgot-password' element={<ForgotPassword/>} />
         <Route path='*' element={<PageNotFound/>} />
       </Routes>
     </BrowserRouter>

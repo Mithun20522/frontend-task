@@ -1,20 +1,23 @@
 import { Link, useNavigate } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc";
 import { useEffect, useState } from "react";
-import {useAuth0} from '@auth0/auth0-react'
+import {useAuth0} from '@auth0/auth0-react';
+import useUserStore from "../store/userStore";
 const Register = () => {
   const [formData, setFormData] = useState({});
+  const { addUser } = useUserStore();
   const navigate = useNavigate();
   const {loginWithRedirect, isAuthenticated} = useAuth0();
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/profile');
+      navigate('/dashboard');
     }
   }, [isAuthenticated, navigate]);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    addUser(formData);
     navigate('/login');
   }
   const handleOnChange = (e) => {
