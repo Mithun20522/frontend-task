@@ -26,9 +26,9 @@ const Sidebar = () => {
             <p>Feed By</p>
           </div>
           <ul className="mx-10 mt-2 text-lg">
-            <li><Link to="feeds">Categories</Link></li>
-            <li><Link to="feeds">Brands</Link></li>
-            <li><Link to="feeds">Products</Link></li>
+            <li><Link className='hover:underline hover:font-semibold' to="feeds">Categories</Link></li>
+            <li><Link className='hover:underline hover:font-semibold' to="feeds">Brands</Link></li>
+            <li><Link className='hover:underline hover:font-semibold' to="feeds">Products</Link></li>
           </ul>
         </div>
         <div>
@@ -37,9 +37,9 @@ const Sidebar = () => {
             <p>Reports</p>
           </div>
           <ul className="mx-10 mt-2 text-lg">
-            <li><Link to="reports">Categories</Link></li>
-            <li><Link to="reports">Brands</Link></li>
-            <li><Link to="reports">Products</Link></li>
+            <li><Link className='hover:underline hover:font-semibold' to="reports">Categories</Link></li>
+            <li><Link className='hover:underline hover:font-semibold' to="reports">Brands</Link></li>
+            <li><Link className='hover:underline hover:font-semibold' to="reports">Products</Link></li>
           </ul>
         </div>
         <div>
@@ -48,8 +48,8 @@ const Sidebar = () => {
             <p>Competitors</p>
           </div>
           <ul className="mx-10 mt-2 text-lg">
-            <li><Link to="competitors">Products</Link></li>
-            <li><Link to="competitors">Prices</Link></li>
+            <li><Link className='hover:underline hover:font-semibold' to="competitors">Products</Link></li>
+            <li><Link className='hover:underline hover:font-semibold' to="competitors">Prices</Link></li>
           </ul>
         </div>
         <div>
@@ -58,8 +58,8 @@ const Sidebar = () => {
             <p>Insights</p>
           </div>
           <ul className="mx-10 mt-2 text-lg">
-            <li><Link to="insights">Keywords</Link></li>
-            <li><Link to="insights" className='hover:underline hover:font-semibold'>Sentiments</Link></li>
+            <li><Link to="insights/keywords" className='hover:underline hover:font-semibold'>Keywords</Link></li>
+            <li><Link to="insights/sentiments" className='hover:underline hover:font-semibold'>Sentiments</Link></li>
           </ul>
         </div>
       </div>

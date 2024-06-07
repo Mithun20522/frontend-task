@@ -1,6 +1,12 @@
+import CloudImageShower from "./CloudImageShower"
+import Sentiments from "./Sentiments"
+
 const Insights = () => {
   return (
-    <div>Insights</div>
+    <div>
+      <Sentiments/>
+      <CloudImageShower/>
+    </div>
   )
 }
 

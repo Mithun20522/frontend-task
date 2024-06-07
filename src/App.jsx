@@ -10,6 +10,7 @@ import Reports from './components/Reports';
 import Insights from './components/Insights';
 import Competitors from './components/Compititors';
 import Sentiments from './components/Sentiments';
+import Keywords from './components/Keywords';
 
 const App = () => {
   return (
@@ -23,7 +24,8 @@ const App = () => {
           <Route path='reports' element={<Reports />} />
           <Route path='insights' element={<Insights />} />
           <Route path='competitors' element={<Competitors />} />
-          <Route path='sentiments' element={<Sentiments />} />
+          <Route path='insights/keywords' element={<Keywords />} />
+          <Route path='insights/sentiments' element={<Sentiments />} />
         </Route>
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='*' element={<PageNotFound />} />

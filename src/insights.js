@@ -1,0 +1,173 @@
+const insightCloudImageData = [
+    {
+        text:'happy',
+        value:20
+    },
+    {
+        text:'Headphone',
+        value:100
+    },
+    {
+        text:'record',
+        value:100
+    },
+    {
+        text:'player',
+        value:90
+    },
+    {
+        text:'music',
+        value:50
+    },
+    {
+        text:'effective',
+        value:80
+    },
+    {
+        text:'learning',
+        value:70
+    },
+    {
+        text:'reading',
+        value:30
+    },
+    {
+        text:'happiness',
+        value:60
+    },
+    {
+
+        text:'category',
+        value:90
+    },
+    {
+
+        text:'senticaller',
+        value:40
+    },
+    {
+
+        text:'houses',
+        value:70
+    },
+    {
+
+        text:'cricket',
+        value:55
+    },
+    {
+        text:'happy',
+        value:20
+    },
+    {
+        text:'Headphone',
+        value:100
+    },
+    {
+        text:'record',
+        value:100
+    },
+    {
+        text:'player',
+        value:90
+    },
+    {
+        text:'music',
+        value:50
+    },
+    {
+        text:'effective',
+        value:80
+    },
+    {
+        text:'learning',
+        value:70
+    },
+    {
+        text:'reading',
+        value:30
+    },
+    {
+        text:'happiness',
+        value:60
+    },
+    {
+
+        text:'category',
+        value:90
+    },
+    {
+
+        text:'senticaller',
+        value:40
+    },
+    {
+
+        text:'houses',
+        value:70
+    },
+    {
+
+        text:'cricket',
+        value:55
+    },
+    {
+        text:'happy',
+        value:20
+    },
+    {
+        text:'Headphone',
+        value:100
+    },
+    {
+        text:'record',
+        value:100
+    },
+    {
+        text:'player',
+        value:90
+    },
+    {
+        text:'music',
+        value:50
+    },
+    {
+        text:'effective',
+        value:80
+    },
+    {
+        text:'learning',
+        value:70
+    },
+    {
+        text:'reading',
+        value:30
+    },
+    {
+        text:'happiness',
+        value:60
+    },
+    {
+
+        text:'category',
+        value:90
+    },
+    {
+
+        text:'senticaller',
+        value:40
+    },
+    {
+
+        text:'houses',
+        value:70
+    },
+    {
+
+        text:'cricket',
+        value:55
+    },
+
+];
+
+export default insightCloudImageData;
