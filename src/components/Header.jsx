@@ -27,13 +27,21 @@ const Header = () => {
   };
 
   return (
-    <header className='flex border p-5 border-black items-stretch justify-between'>
-      <div className='text-3xl flex-1 h-full flex items-center'>Logo</div>
-      <div className='flex-1 h-full flex items-center justify-between'>
-          username
+    <header className="flex flex-col sm:flex-row border p-5 border-black items-stretch justify-between">
+      <div className="text-3xl flex-1 h-full flex items-center">Logo</div>
+      <div className="flex-1 h-full flex items-center justify-between">
+        <span className="text-xl font-medium">{currentUser ? currentUser.username : user?.name}</span>
+        {(isAuth0Authenticated || currentUser) && (
+          <button
+            onClick={handleLogout}
+            className="text-white bg-slate-500 hover:bg-slate-700 px-3 py-1 rounded-md text-sm"
+          >
+            Log out
+          </button>
+        )}
       </div>
-      <div className='text-2xl font-semibold flex-1 h-full flex items-center'>Amazone Inc.</div>
-      <nav className='flex items-center gap-3 mx-5 flex-1'>
+      <div className="text-2xl font-semibold flex-1 h-full flex items-center justify-center">Amazone Inc.</div>
+      <nav className="flex items-center gap-3 mx-5 flex-1 justify-center sm:justify-end">
         <p>Notifications</p>
         <p>About</p>
         <p>Settings</p>

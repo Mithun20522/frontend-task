@@ -1,7 +1,9 @@
-const MainContent = () => {
+const MainContent = ({ children }) => {
   return (
-    <div>MainContent</div>
-  )
-}
+    <div className="p-5">
+      {children}
+    </div>
+  );
+};
 
-export default MainContent
+export default MainContent;

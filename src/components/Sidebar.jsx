@@ -1,8 +1,9 @@
-import { FaHandHoldingMedical } from "react-icons/fa";
-import { CgNotes } from "react-icons/cg";
-import { FaTrophy } from "react-icons/fa";
-import { CgInsights } from "react-icons/cg";
-import { useState } from "react";
+import { FaHandHoldingMedical } from 'react-icons/fa';
+import { CgNotes } from 'react-icons/cg';
+import { FaTrophy } from 'react-icons/fa';
+import { CgInsights } from 'react-icons/cg';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,16 +19,16 @@ const Sidebar = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
-      <div className={`${isSidebarOpen ? 'block' : 'hidden'} sm:block flex flex-col gap-7 px-8 py-5 `}>
+      <div className={`${isSidebarOpen ? 'block' : 'hidden'} sm:block flex flex-col gap-7 px-8 py-5`}>
         <div>
           <div className="flex items-center gap-2 text-xl sm:text-3xl">
             <FaHandHoldingMedical />
             <p>Feed By</p>
           </div>
           <ul className="mx-10 mt-2 text-lg">
-            <li>Categories</li>
-            <li>Brands</li>
-            <li>Products</li>
+            <li><Link to="feeds">Categories</Link></li>
+            <li><Link to="feeds">Brands</Link></li>
+            <li><Link to="feeds">Products</Link></li>
           </ul>
         </div>
         <div>
@@ -36,9 +37,9 @@ const Sidebar = () => {
             <p>Reports</p>
           </div>
           <ul className="mx-10 mt-2 text-lg">
-            <li>Categories</li>
-            <li>Brands</li>
-            <li>Products</li>
+            <li><Link to="reports">Categories</Link></li>
+            <li><Link to="reports">Brands</Link></li>
+            <li><Link to="reports">Products</Link></li>
           </ul>
         </div>
         <div>
@@ -47,8 +48,8 @@ const Sidebar = () => {
             <p>Competitors</p>
           </div>
           <ul className="mx-10 mt-2 text-lg">
-            <li>Products</li>
-            <li>Prices</li>
+            <li><Link to="competitors">Products</Link></li>
+            <li><Link to="competitors">Prices</Link></li>
           </ul>
         </div>
         <div>
@@ -57,8 +58,8 @@ const Sidebar = () => {
             <p>Insights</p>
           </div>
           <ul className="mx-10 mt-2 text-lg">
-            <li>Keywords</li>
-            <li>Sentiments</li>
+            <li><Link to="insights">Keywords</Link></li>
+            <li><Link to="insights" className='hover:underline hover:font-semibold'>Sentiments</Link></li>
           </ul>
         </div>
       </div>
